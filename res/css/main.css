@@ -1,0 +1,75 @@
+header img.img-responsive {
+    max-width: 400px;
+}
+
+.modal img.img-responsive {
+    max-width: 350px;
+}
+
+.popover.tour-tour .btn[data-role="end"] {
+    margin-left: 1em;
+}
+
+.popover.tour-tour .popover-title {
+    background-color: #18bc9c;
+    color: #FFF;
+}
+
+.spacer {
+    margin-top: 50px;
+}
+
+#section_try .bg_disassembled {
+    background: transparent url('../img/3x3x3_disassembled.jpg') no-repeat right bottom;
+    background-size: 50%;
+}
+
+#section_try .bg_disassembled p, #section_try .bg_disassembled ol {
+    padding-right: 45%;
+}
+
+.question {
+    padding-bottom: 1200px;
+}
+
+#section_fail .bg_layer {
+    background: transparent url('../img/3x3x1.png') no-repeat left bottom;
+    background-size: 50%;
+}
+
+#section_fail .bg_layer p {
+    padding-left: 45%;
+}
+
+#section_fail .bg_layer ol {
+    padding-left: 50%;
+}
+
+#section_rubik .bg_rubik {
+    background: transparent url('../img/rubik.png') no-repeat right top;
+    background-size: 40%;
+}
+
+#section_rubik .bg_rubik p {
+    padding-right: 45%;
+}
+
+#section_rubik .bg_imitation {
+    background: transparent url('../img/3x3x3_open.png') no-repeat left bottom;
+    background-size: 40%;
+}
+
+#section_rubik .bg_imitation p {
+    padding-left: 45%;
+}
+
+table th {
+    text-align: center;
+}
+#section_fail_content, #section_numbers_content {
+    padding-top: 100px;
+}
+
+.table-responsive {
+    padding: 30px 0;
+}

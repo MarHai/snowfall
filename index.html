@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+
+        <title>Around the Corner &middot; snowfall example by @drfollowmario</title>
+
+		<link rel="stylesheet" href="res/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="res/css/bootstrap-theme-freelancer.css" />
+        <link rel="stylesheet" href="res/css/jqmath-0.4.3.css" />
+        <link rel="stylesheet" href="res/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="res/css/fonts.min.css" />
+        <link rel="stylesheet" href="res/css/animate.min.css" />
+		<link rel="stylesheet" href="res/css/main.css" />
+    </head>
+    <body id="page-top" class="index">
+        
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable_navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#page-top">Around the Corner</a>
+                </div>
+                <div class="collapse navbar-collapse" id="collapsable_navbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="hidden"><a href="#page-top"></a></li>
+                        <li class="page-scroll"><a href="#section_try" class="nav-link">Try</a></li>
+                        <li class="page-scroll"><a href="#section_fail" class="nav-link">Fail</a></li>
+                        <li class="page-scroll"><a href="#section_solve" class="nav-link">Solve</a></li>
+                        <li class="page-scroll"><a href="#section_numbers" class="nav-link">Numbers</a></li>
+                        <li class="page-scroll"><a href="#section_rubik" class="nav-link">Rubik</a></li>
+                        <li class="page-scroll"><a href="#section_scene" class="nav-link">Cubing</a></li>
+                        <li class="page-scroll"><a href="#section_derivates" class="nav-link">Derivates</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        <header>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <img class="img-responsive" src="res/img/3x3x3.svg" alt="a magic cube" />
+                        <div class="intro-text">
+                            <span class="name">Around the Corner</span>
+                            <hr class="star-light" />
+                            <span class="skills">How a nerd's puzzle made its way to the mainstream. And back to nerds.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+		
+        <section id="section_try">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2>Try it!</h2>
+                        <hr class="star-primary" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 bg_disassembled wow fadeInUp">
+                        <p>I am pretty sure, you had one of these magic cubes (also called <em>Rubik's cube<sup>&reg;</sup></em>). Maybe you still have one. So in order to get into the right mood, grab it and go ahead: scramble (without sneak-peeks) and try to solve it.</p>
+                        <p>
+                            Okay, tough start, I know. Maybe I give you a few hints first:
+                            <ol>
+                                <li>The ordinary 3&times;3&times;3 cube is made up from six <em>dependent</em> sides. That means that you cannot choose whether you'd like the green side next to the red one (that'll work) or next to the blue one (that won't work).</li>
+                                <li>The cube is constructed with the center pieces of each side to be fixed. You may rotate but not move them.</li>
+                                <li>Except for the center pieces, there are two other kinds of pieces:
+                                    <ul>
+                                        <li><em>Edge pieces</em> contain two sides (= colors) and go into one of twelve positions as there are exactly twelve pieces of them.</li>
+                                        <li><em>Corner pieces</em> are made up from three sides (colors). There are only eight of them and (you might guess already) there are eight positions where they could go.</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </p>
+                    </div>
+                    <div class="col-lg-12">
+                        <p class="text-muted pull-right"><small>Picture by <em>Curis</em>, <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a> license, via Wikimedia Commons</small></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+		
+        <section id="section_fail" class="success">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2>Fail!</h2>
+                        <hr class="star-light" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 question wow bounceIn text-center page-scroll">
+                        <p>Could you solve it?</p>
+                        <p>
+                            <a href="#section_numbers" class="btn btn-info tooltips" data-title="Skip 'Fail!' and 'Solve it!' & go directly to 'Numbers'" data-placement="bottom">Yes (I swear)</a>
+                            <a href="#section_fail_content" class="btn btn-warning tooltips" data-title="I want to go on reading" data-placement="bottom">Nope (don't blame me)</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="row" id="section_fail_content">
+                    <div class="col-lg-12 text-center">
+                        <h2>Fail!</h2>
+                        <hr class="star-light" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 bg_layer wow fadeInDown">
+                        <p>Don't worry, most people are not able to solve a 3&times;3&times;3 magic cube.</p>
+                        <p>Let me help you:
+                            <ol>
+                                <li>Think of the cube as it would be made out of three layers (a layer's example is depicted in the image on the left).</li>
+                                <li>Imagine some pale and pimply nerds with some very thick glasses during the 1980's to try'n'error the cube over and over again.</li>
+                                <li>No, really: think of them!</li>
+                                <li>Okay, now trust <em>me</em> to believe <em>them</em> that the best way to solve the cube is to approach it by following some basic principles:
+                                    <ul>
+                                        <li>try to solve it layer by layer</li>
+                                        <li>as the center pieces are not moveable, every side's color is determined by its center piece (that is, if a side's center piece is white, this side is gonna be white, no matter what)</li>
+                                        <li>for every piece (they are actually called <em>cubies</em>) you position, pay attention that they match each side's color</li>
+                                    </ul>
+                                </li>
+                                <li>Now try again.</li>
+                            </ol>
+                        </p>
+                    </div>
+                    <div class="col-lg-12">
+                        <p class="text-muted"><small>Picture by <em>Thomas 003</em>, <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a> license, via Wikimedia Commons</small></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="section_solve">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2>Solve it!</h2>
+                        <hr class="star-primary" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 text-center wow slideInDown">
+                        <p>Remember the pale and pimply 1980's nerds? Well, they solved the cube. And they did so in multiple ways. Since finding these ways is an awful lot of work, everyone who found a new recipe to solve a scrambled magic cube, happy of having achieved this mental milestone, named this recipe after themselve. Hence, we now know of multiple methods to solve the cube, all named after their founders. Here are some of them (yet, there are more):</p>
+                        <div class="table-responsive wow zoomIn">
+                            <table class="table table-striped table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Founder</th>
+                                        <th>Year of discovery</th>
+                                        <th>Fast to use</th>
+                                        <th>Easy to use</th>
+                                        <th>Efficient</th>
+                                        <th>Easy to learn</th>
+                                        <th>Link to description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="active">
+                                        <th>layer-by-layer</th>
+                                        <td>n/a</td>
+                                        <td>?</td>
+                                        <td><i class="fa fa-ban"></i></td>
+                                        <td><i class="fa fa-check"></i></td>
+                                        <td><i class="fa fa-ban"></i></td>
+                                        <td><i class="fa fa-check"></i></td>
+                                        <td><a href="http://ruwix.com/the-rubiks-cube/how-to-solve-the-rubiks-cube-beginners-method/">solve it</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Petrus</th>
+                                        <td>Lars Petrus</td>
+                                        <td>1981</td>
+                                        <td><i class="fa fa-check"></i></td>
+                                        <td><i class="fa fa-ban"></i></td>
+                                        <td><i class="fa fa-ban"></i></td>
+                                        <td><i class="fa fa-check"></i></td>
+                                        <td><a href="http://lar5.com/cube/">solve it</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Waterman</th>
+                                        <td>Marc Waterman</td>
+                                        <td>1981/1982</td>
+                                        <td><i class="fa fa-ban"></i></td>
+                                        <td><i class="fa fa-ban"></i></td>
+                                        <td><i class="fa fa-ban"></i></td>
+                                        <td><i class="fa fa-check"></i></td>
+                                        <td><a href="http://rubikscube.info/waterman/index.php">solve it</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Fridrich</th>
+                                        <td>Jessica Fridrich</td>
+                                        <td>1997</td>
+                                        <td><i class="fa fa-check"></i></td>
+                                        <td><i class="fa fa-check"></i></td>
+                                        <td><i class="fa fa-check"></i></td>
+                                        <td><i class="fa fa-ban"></i></td>
+                                        <td><a href="http://www.ws.binghamton.edu/fridrich/">solve it</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Roux</th>
+                                        <td>Gilles Roux</td>
+                                        <td>2000's</td>
+                                        <td><i class="fa fa-check"></i></td>
+                                        <td><i class="fa fa-ban"></i></td>
+                                        <td><i class="fa fa-check"></i></td>
+                                        <td><i class="fa fa-ban"></i></td>
+                                        <td><a href="http://grrroux.free.fr/">solve it</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th>ZZ</th>
+                                        <td>Zbigniew Zborowski</td>
+                                        <td>2006</td>
+                                        <td><i class="fa fa-ban"></i></td>
+                                        <td><i class="fa fa-ban"></i></td>
+                                        <td><i class="fa fa-check"></i></td>
+                                        <td><i class="fa fa-ban"></i></td>
+                                        <td><a href="http://cube.crider.co.uk//">solve it</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-7 wow slideInUp">
+                        <p>Every solving method (recipe) contains several steps of how to do this (e.g., put the corner stones in the right position) and how to do that (e.g., rotate the corner stones adequately). These single-step recipes are called <em>algorithms</em> and in order to solve the cube more than once&mdash;and I know that sounds hard&mdash;you will (need to) learn some of these algorithms.</p>
+                        <p>Now, the easiest method for beginners is the so-called layer-by-layer method (as so many beginners are using it, it does not even deserve a founder's name). It means, that you'll start with one&mdash;say: the white&mdash;layer, solve it correctly (also according to the adjacent sides), then move on to the subsequent layer (the one in the middle), and ultimately you solve the top layer (= yellow, if you have started with white). Here's the full idea:
+                            <ol>
+                                <li>start with the white side up</li>
+                                <li>solve the white center and edge cubies (called, the white cross)</li>
+                                <li>solve the white corner cubies</li>
+                                <li>turn the cube around in order to now have the yellow side up</li>
+                                <li>solve the middle layer's edge cubies</li>
+                                <li>position the yellow side's edge cubies</li>
+                                <li>rotate the yellow side's edge cubies adequately (resulting in a yellow cross)</li>
+                                <li>position the yellow layer's corner cubies</li>
+                                <li>rotate the yellow layer's corner cubies</li>
+                            </ol>
+                        </p>
+                        <p>A little trivia: in Germany's weekly magazine <em>Der Spiegel</em>, back in 1981, there was an "article" telling its readers how to solve the cube. As the PDF version is still available, <a href="http://www.spiegel.de/spiegel/a-258266.html">go ahead read'n'solve</a> it. The article's title&mdash;by the way&mdash;says something like "yell hurrah, spend some drinks." As it is German, though, you may find <a href="http://ruwix.com/the-rubiks-cube/how-to-solve-the-rubiks-cube-beginners-method/">this english method description</a> more useful.</p>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="alert alert-info wow fadeInRight">
+                            <h5>Notations</h5>
+                            <p>In order to learn new algorithms by hard, some people came up with a way of writing them down (<small>One may also speculate that notations came up in order to avoid human contact among pale and thick-glassed ...</small>).</p>
+                            <p><em>Notations follow orientation.</em></p>
+                            <p>That is, you have one side facing up (e.g., white), and notation tells you to move the right-handed layer in clockwise (<code>R</code>) or counter-clockwise (<code>R'</code>) direction. The same goes with the left-handed layer (<code>L</code> and <code>L'</code> respectively), the upper (<code>U</code>) and lower (<code>D</code> for down) layer, as well as the front (<code>F</code>) and back (<code>B</code>) layer.</p>
+                        </div>
+                        <img src="res/img/notation.png" alt="notation" class="img-responsive wow bounceInRight" />
+                        <p class="text-muted text-center"><small>Image by <em>matt2uy</em>, <a href="http://creativecommons.org/licenses/by-sa/3.0">CC</a> license, via <a href="http://www.instructables.com/file/FYHASK9HWNU665W">instructables.com</a></small></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+		
+        <section id="section_numbers" class="success">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2>Numbers</h2>
+                        <hr class="star-light" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 question wow bounceIn text-center page-scroll">
+                        <p>Could you solve it?</p>
+                        <p>
+                            <a href="#section_numbers_content" class="btn btn-info tooltips" data-title="I want to go on reading" data-placement="bottom">Yes (this time, I mean it)</a>
+                            <a href="#section_solve" class="btn btn-warning tooltips" data-title="Take me back to the algorithms" data-placement="bottom">Still no (and that makes me sad)</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 text-center" id="section_numbers_content">
+                        <h2>Numbers</h2>
+                        <hr class="star-light" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h1 class="wow bounceIn number">43 252 003 274 489 856 000</h1>
+                        <p class="lead">That's the number of possible combinations within one cube. It reads as some fourty-three quintillions.</p>
+                        <hr />
+                        <p class="wow slideInLeft">Why that number? It's actually pretty simple. There are eight corner stones, giving us <code>8!</code> (the exclamation mark is called <em>faculty</em>) possibilities. A corner stone can take one of three rotations, combined with the eight corner stones, that makes another <code>3<sup>8</sup></code> possibilities. There are twelve edge stones (<code>12!</code>), all capable of two rotations (<code>2<sup>12</sup></code>). If we multiply these possibilities we'd get a result larger than our 43 quintillions.</p>
+                        <p class="wow slideInRight">Luckily, both the 8th corner stone and the 12th edge stone cannot take all rotations as they are determined by the other corner and edge stones. We thus divide by the number of rotations, once for the corner stones (<code>3</code>) and once for the edge stones (<code>2</code>). Ultimately, as we do not have any free positions, we always need to change two stones or two sides. That is, we can divide our result by another <code>2</code>, leaving us with the following neat formula:</p>
+                        <p class="wow slideInUp">$${8!⋅3^8⋅12!⋅2^12}/{3⋅2⋅2}=43.252.003.274.489.856.000$$</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="section_rubik">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2>Ernő Rubik</h2>
+                        <hr class="star-primary" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 bg_rubik wow fadeInRight">
+                        <p>We still do not know why the magic cube is sometimes referred to as <em>Rubik's cube<sup>&reg;</sup></em>, do we? The answer is rather simple, though&mdash;it's because of its initial founder, <em>Ernő Rubik</em>.</p>
+                        <p>Rubik was born in 1944 and is a Hungarian architect and designer. He invented the cube in 1974 in order to puzzle his students and found it to be such a good puzzle that he applied for a patent only a few months later. He paired up with New-York-based <em>Ideal Toys</em>, a toy company that bought the license from Ernő and renamed the puzzle into <em>Rubik's cube<sup>&reg;</sup></em>.</p>
+                        <blockquote class="blockquote">
+                            <p>I believe probably the most characteristic part of the cube is the contradiction between simplicity and complexity. I love the simplicity of the cube because it’s a very clear geometrical shape, and I love geometry because it’s the study of how the whole universe is structured.</p>
+                            <footer>Ernő Rubik in a <cite title="http://edition.cnn.com/2012/10/10/tech/rubiks-cube-inventor/index.html">CNN interview</cite> in 2012</footer>
+                        </blockquote>
+                    </div>
+                    <div class="col-lg-12">
+                        <p class="text-muted pull-right"><small>Picture by <em>Babak Mansouri</em>, <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a> license, via Wikimedia Commons</small></p>
+                    </div>
+                </div>
+                <div class="row spacer">
+                    <div class="col-lg-12 bg_imitation wow fadeInLeft">
+                        <p class="page-scroll">It's international success followed suite. The cube was instantly awarded with the well-renowned "German Game of the Year" prize in 1980. As with 1980 the cube gained international popularity, selling over 350 million pieces until 2009 and thus making it one of the best-selling toys of all time. Today, plenty of copycats exist (explicitely called magic cubes rather than "Rubik"); however, despite the initial imitation, some of these versions are very popular among speedcubers (see <a href="#section_scene">the next section</a>) as their mechanics move smoother.</p>
+                        <p>Rubik's initial version was made out of wood and rubber bands, yet he quickly changed the materials to plastic. Today, almost all cubes are made from plastic. Yet, the basic mechanics have not changed ever since: a 3-dimensional cross in the middle of the cube fixates the center cubies and their relation to each other. All other cubies are inserted rather loosely.</p>
+                        <p>These days, there's also a standardized size of the 3&times;3&times;3 cube in order to make Rubik's and others comparable. The official size is <em>57,5mm</em> in length (as it's a cube, the full size declaration would be 57,5&times;57,5&times;57,5, obviously). Smaller and larger versions are available, but they are not allowed at official contests.</p>
+                    </div>
+                    <div class="col-lg-12">
+                        <p class="text-muted"><small>Picture by <em>Roland Frisch</em>, <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a> license, via Wikimedia Commons</small></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+		
+        <section id="section_scene" class="success">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2>The Cubing Scene</h2>
+                        <hr class="star-light" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <p>Yes, you read that one right: <em>official contests</em>. The cubing scene is big and it's growing. There are championships, there are world records (in multiple disciplines), and there is even a world cube association (of which, by the way, <abbr class="tooltips" title="The inventer of the Roux method">Gilles Roux</abbr> used to be a board member). To get an impression of these tournaments, check out the variety of disciplines people try to solve cubes in:</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2 text-center wow flipInX">
+                        <h4>2&times;2&times;2</h4>
+                        <p>Solve a smaller version of the cube as quickly as you can.</p>
+                    </div>
+                    <div class="col-lg-2 text-center wow flipInX" data-wow-delay="0.5s">
+                        <h4>3&times;3&times;3</h4>
+                        <p>Just solve an ordinary cube within an adequate time.</p>
+                    </div>
+                    <div class="col-lg-2 text-center wow flipInX" data-wow-delay="0.6s">
+                        <h4>fewest moves</h4>
+                        <p>Solve an ordinary cube with as fewest moves as you can get.</p>
+                    </div>
+                    <div class="col-lg-2 text-center wow flipInX" data-wow-delay="0.7s">
+                        <h4>4&times;4&times;4</h4>
+                        <p>That cube is a little harder as the center cubies can actually move.</p>
+                    </div>
+                    <div class="col-lg-2 text-center wow flipInX" data-wow-delay="0.8s">
+                        <h4>5&times;5&times;5</h4>
+                        <p>Getting tougher, that one's called "Professor's cube" by the way..</p>
+                    </div>
+                    <div class="col-lg-2 text-center wow flipInX" data-wow-delay="0.9s">
+                        <h4>6&times;6&times;6</h4>
+                        <p>It's quite similar to the 4&times;4&times;4 cube although larger.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2 text-center wow flipInX" data-wow-delay="1s">
+                        <h4>7&times;7&times;7</h4>
+                        <p>Okay, that's nerdy. And it has an own name: "V-Cube 7."</p>
+                    </div>
+                    <div class="col-lg-2 text-center wow flipInX" data-wow-delay="1.1s">
+                        <h4>3&times;3&times;3 blindfolded</h4>
+                        <p>Look at the cube but don't solve it. Now close your eyes and solve.</p>
+                    </div>
+                    <div class="col-lg-2 text-center wow flipInX" data-wow-delay="1.2s">
+                        <h4>4&times;4&times;4/5&times;5&times;5 blindfolded</h4>
+                        <p>Again, look at a (bigger) cube, close your eyes, and do it.</p>
+                    </div>
+                    <div class="col-lg-2 text-center wow flipInX" data-wow-delay="1.3s">
+                        <h4>multiple blindfolded</h4>
+                        <p>Remember a few cubes at once before shutting your eyes and solving them.</p>
+                    </div>
+                    <div class="col-lg-2 text-center wow flipInX" data-wow-delay="1.4s">
+                        <h4>one-handed</h4>
+                        <p>You are allowed to look and it's only a 3&times;3&times;3&mdash;but you are not allowed to use your second hand.</p>
+                    </div>
+                    <div class="col-lg-2 text-center wow flipInX" data-wow-delay="1.5s">
+                        <h4>by feet</h4>
+                        <p>Solve it, using your feet. Only your feet. That one's called "stinky cube" (just kidding).</p>
+                    </div>
+                </div>
+                <div class="row spacer">
+                    <div class="col-lg-12 text-center">
+                        <p>However, the supreme discipline is <em>speedcubing</em> with an official 3&times;3&times;3 (and thus 57,5&times;57,5&times;57,5mm) cube. Take a look:</p>
+                    </div>
+                    <div class="col-lg-12 text-center spacer">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/L3tSb_SsOtM?rel=0&amp;end=21&amp;showinfo=0&amp;vq=hd1080&amp;autohide=1&amp;controls=0&fs=1" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="section_derivates">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2>Derivates</h2>
+                        <hr class="star-primary" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <p>Ultimately, after you now know a lot about the 3&times;3&times;3 magic cube and are even capable of solving it (let's assume, at least), you may also be a little hooked on such puzzles. Well, I am. Luckily, there are some derivates of the cube that keep me puzzled. Find out, what kind of derivates exist by clicking on the images.</p>
+                        <div class="row">
+                            <div class="col-sm-3 portfolio-item">
+                                <a href="#modal_tmpl" class="portfolio-link wow bounceIn" data-title="Smaller cubes">
+                                    <div class="caption">
+                                        <div class="caption-content">
+                                            <i class="fa fa-search-plus fa-3x"></i>
+                                        </div>
+                                    </div>
+                                    <img src="res/img/2x2x2.jpg" class="img-responsive" alt="Mike Gonzalez" />
+                                    <p class="hide">
+                                        There are smaller versions of the cube available. These seem to be beginner-savvy cubes and they are indeed a little easier to solve; however, they are not some sort of try-me-and-you-are-ready-for-the-next-dimension cubes as their solution differs completely from the solution a 3&times;3&times;3 or other cubes need.
+                                    </p>
+                                </a>
+                            </div>
+                            <div class="col-sm-3 portfolio-item">
+                                <a href="#modal_tmpl" class="portfolio-link wow bounceIn" data-title="Larger cubes">
+                                    <div class="caption">
+                                        <div class="caption-content">
+                                            <i class="fa fa-search-plus fa-3x"></i>
+                                        </div>
+                                    </div>
+                                    <img src="res/img/5x5x5.jpg" class="img-responsive" alt="Mike Gonzalez" />
+                                    <p class="hide">
+                                        There are larger versions of the cube available, such as 4&times;4&times;4 or (as in the picture) 5&times;5&times;5. These variants are available up to 7 pieces per side, and their solution get harder with every additional piece.
+                                    </p>
+                                </a>
+                            </div>
+                            <div class="col-sm-3 portfolio-item">
+                                <a href="#modal_tmpl" class="portfolio-link wow bounceIn" data-title="Non-colored cubes">
+                                    <div class="caption">
+                                        <div class="caption-content">
+                                            <i class="fa fa-search-plus fa-3x"></i>
+                                        </div>
+                                    </div>
+                                    <img src="res/img/3x3x3_mirror.png" class="img-responsive" alt="Thomas 003" />
+                                    <p class="hide">
+                                        As you can see, there are also cubes without colored faces. This makes them slightly more complicated as you cannot focus on the colors anymore but need to keep in mind the pieces' belongings to the quasi-colored faces.
+                                    </p>
+                                </a>
+                            </div>
+                            <div class="col-sm-3 portfolio-item">
+                                <a href="#modal_tmpl" class="portfolio-link wow bounceIn" data-title="Weird cubes">
+                                    <div class="caption">
+                                        <div class="caption-content">
+                                            <i class="fa fa-search-plus fa-3x"></i>
+                                        </div>
+                                    </div>
+                                    <img src="res/img/tetraminx.jpg" class="img-responsive" alt="Hellbus" />
+                                    <p class="hide">
+                                        The <em>Tetraminx</em> in the picture is only one example of weird non-cubic cubes. That is, these cubes either are no cubes at all or they change their shape through rotating sides. In addition, they sometimes also lock various moves, making them a little tougher to solve.
+                                    </p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+        <footer class="text-center">
+            <div class="footer-above">
+                <div class="container">
+                    <div class="row">
+                        <div class="footer-col col-md-4 wow slideInUp">
+                            <h3>The Story</h3>
+                            <p>Cubing facts based on <a href="https://en.wikipedia.org/wiki/Rubik%27s_Cube">Wikipedia</a>, images from <a href="https://commons.wikimedia.org/wiki/File:Rubik%27s_cube.svg">Wikimedia</a>.</p>
+                        </div>
+                        <div class="footer-col col-md-4 wow slideInUp">
+                            <h3>The Storytelling</h3>
+                            <p>This page should, besides motivating your cubing self, explain how to easily set up a <a href="https://en.wikipedia.org/wiki/Scrolling">scrollytelling</a>/<a href="http://www.thewire.com/technology/2012/12/new-york-times-snow-fall-feature/60219/">snowfall</a> page. If you want to find out more, <a href="#tour">start the tour</a>.</p>
+                        </div>
+                        <div class="footer-col col-md-4 wow slideInUp">
+                            <h3>The Imprint</h3>
+                            <p>Page and snowfall tour created by <a href="https://ssl-account.com/haim.it/">Mario Haim</a>. Powered by <a href="https://jquery.com/">jQuery</a>, <a href="http://getbootstrap.com/">Bootstrap</a>, <a href="https://daneden.github.io/animate.css/">animate.css</a>, <a href="http://mynameismatthieu.com/WOW/">WOW.js</a>, <a href="https://fortawesome.github.io/Font-Awesome/">Font Awesome</a>, <a href="http://mathscribe.com/author/jqmath.html">jqMath</a>, and the <a href="http://startbootstrap.com">Freelance template</a>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-below">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 page-scroll">
+                            <a href="#page-top" class="pull-right">to top</a>
+                            &copy; by <a href="http://blog.haim.it/impressum-2/">Mario Haim</a> 2015 &middot; Download source at <a href="https://github.com/MarHai/snowfall">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <div class="scroll-top page-scroll visible-xs visible-sm">
+            <a class="btn btn-primary" href="#page-top">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+        </div>
+        
+        <div class="portfolio-modal modal fade" id="modal_tmpl" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <h2></h2>
+                                <hr class="star-primary" />
+                                <img src="res/img/2x2x2.jpg" class="img-responsive img-centered" alt="2x2x2 cube" />
+                                <p></p>
+                                <p class="text-muted"><small>
+                                    Picture by <em></em>, <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a> license, via Wikimedia Commons
+                                </small></p>
+                                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="res/js/jquery.min.js"></script>
+		<script src="res/js/bootstrap.min.js"></script>
+        <script src="res/js/jqmath-etc-0.4.3.min.js"></script>
+        <script src="res/js/jquery.easing.min.js"></script>
+        <script src="res/js/wow.min.js"></script>
+		<script src="res/js/main.js"></script>
+    </body>
+</html>
